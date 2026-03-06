@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #161616;
+}
+
+.text-image {
+  background-image: url("/bgnewopen.jpg");
+  background-size: cover;
+  background-position: center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+.experience-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.experience-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #2a2a2a 0px,
+      #2a2a2a calc(25% - 2px),
+      transparent calc(25% - 2px),
+      transparent 25%
+    );
+}
+
+.experience-scroll::-webkit-scrollbar-thumb {
+  background: #CB9E38;
+  border-radius: 0;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #CB9E38 0px,
+      #CB9E38 calc(25% - 2px),
+      transparent calc(25% - 2px),
+      transparent 25%
+    );
+}
+
+/* Segmented Progress Indicator */
+.segmented-progress {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.segment {
+  width: 40px;
+  height: 4px;
+  background: #2a2a2a;
+  transition: background 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .segmented-progress {
+    margin-top: 16px;
+  }
+  
+  .segment {
+    width: 60px;
+    height: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .segment {
+    width: 80px;
+    height: 8px;
+  }
+}
+
+
+.segment.active {
+  background: #CB9E38;
+}
+
+.writing-vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
