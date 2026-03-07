@@ -43,48 +43,55 @@ export default function FeaturedExperiencesMobile() {
     const current = data.find((item) => item.id === active);
 
     return (
-        <div className="relative w-full md:hidden -mt-[80px] min-h-[1200px]">
-            {/* Background Image Container */}
+        <div className="relative w-full md:hidden  -mt-40 min-h-[1200px] ">
+
             <div className="absolute inset-0 w-full h-full">
                 <img
-                    src="/featuredexperiences.png"
+                    src="/sefeature.png"
                     alt="background"
                     className="w-full h-full object-cover"
                 />
             </div>
-            
-            {/* Overlay Content */}
-            <div className="relative w-full flex flex-col items-start pt-6 px-4 pb-8 z-10">
-                <div className="w-full text-white">
-                    {/* Heading */}
-                    <h1 className="text-lg font-bold leading-tight whitespace-normal mt-2">
-                        京都嵐山で
-                        <span className="text-[#CB9E38] relative mx-1 inline-block">
-                            日本文化と伝統を体験
-                            <img
-                                src="/yellowline.png"
-                                alt=""
-                                className="absolute left-0 bottom-[-4px] w-full"
-                            />
+
+
+
+            <div className="relative w-full flex flex-col    items-start pt-6 px-4 pb-8 z-10">
+                <div className="w-full text-white  ">
+
+
+                    <h1 className="text-lg font-black leading-tight whitespace-normal mt-50">
+                        <span className="block text-white">
+                            京都嵐山で
                         </span>
-                        できる、
-                        <br />
-                        <span className="block mt-1">
+                        <span className="block mt-3">
+                            <span className="text-[#CB9E38] relative inline-block">
+                                日本文化と伝統を体験
+                                <img
+                                    src="/yellowline.png"
+                                    alt=""
+                                    className="absolute left-0 bottom-[-4px] w-[170px]"
+                                />
+                            </span>
+                            <span className="text-white inline ml-1">
+                                できる
+                            </span>
+                        </span>
+                        <span className="block text-white mt-3">
                             新しい観光商業施設。
                         </span>
                     </h1>
 
-                    {/* Paragraph */}
-                    <p className="mt-3 text-white font-bold text-xs whitespace-normal leading-relaxed">
-                        嵐山スクエアは、京都・嵐山の中心に位置する体験型観光商業施設です。忍者体験、伝統的な着つくり、本格的なカフェ、
-                        <span className="block mt-1">
-                            そして記念コインショップなど、日本文化を五感で楽しめる4つのコンテンツをご用意しています。
+
+                    <p className="mt-8 text-white font-bold font-700 text-xs whitespace-normal leading-relaxed">
+                        嵐山スクエアは、京都・嵐山の中心に位置する体験型観光商業施設です。
+                        <span className="block mt-6">
+                            忍者体験、伝統的な着つくり、本格的なカフェ、そして記念コインショップなど、日本文化を五感で楽しめる4つのコンテンツをご用意しています。
                         </span>
                     </p>
 
-                    {/* Floor Map Section */}
+
                     <div className="mt-6 w-full">
-                        <div className="relative w-full bg-[#181818]/80 rounded-lg p-4 border border-[#AAAAAA]/50">
+                        <div className="relative w-full  p-4 ">
                             <img
                                 src="/housemap.png"
                                 className="w-full h-auto object-contain"
@@ -94,74 +101,70 @@ export default function FeaturedExperiencesMobile() {
                             {/* Map Buttons */}
                             <button
                                 onClick={() => setActive(1)}
-                                className={`absolute cursor-pointer top-[29%] left-[41%] text-white font-bold w-8 h-8 flex items-center justify-center text-base rounded-full ${
-                                    active === 1 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
-                                }`}
+                                className={`absolute cursor-pointer top-[29%] left-[41%] text-white font-bold w-8 h-8 flex items-center justify-center text-base ${active === 1 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
+                                    }`}
                             >
                                 1
                             </button>
 
                             <button
                                 onClick={() => setActive(2)}
-                                className={`absolute cursor-pointer top-[35%] left-[68.5%] text-white font-bold w-8 h-8 flex items-center justify-center text-base rounded-full ${
-                                    active === 2 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
-                                }`}
+                                className={`absolute cursor-pointer top-[35%] left-[68.5%] text-white font-bold w-8 h-8 flex items-center justify-center text-base  ${active === 2 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
+                                    }`}
                             >
                                 2
                             </button>
 
                             <button
                                 onClick={() => setActive(3)}
-                                className={`absolute cursor-pointer top-[79%] left-[30%] text-white font-bold w-8 h-8 flex items-center justify-center text-base rounded-full ${
-                                    active === 3 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
-                                }`}
+                                className={`absolute cursor-pointer top-[79%] left-[30%] text-white font-bold w-8 h-8 flex items-center justify-center text-base  ${active === 3 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
+                                    }`}
                             >
                                 3
                             </button>
 
                             <button
                                 onClick={() => setActive(4)}
-                                className={`absolute cursor-pointer top-[38%] left-[17%] text-white font-bold w-8 h-8 flex items-center justify-center text-base rounded-full ${
-                                    active === 4 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
-                                }`}
+                                className={`absolute cursor-pointer top-[38%] left-[17%] text-white font-bold w-8 h-8 flex items-center justify-center text-base  ${active === 4 ? 'bg-[#CB9E38]' : 'bg-[#000000]/50'
+                                    }`}
                             >
                                 4
                             </button>
                         </div>
                     </div>
 
-                    {/* Experience Detail Section */}
+
                     <div className="mt-6 w-full">
-                        <div className="bg-[#181818]/80 rounded-lg border border-[#AAAAAA]/50 overflow-hidden">
+                        <div className="flex bg-[#2F2F2F]/40   overflow-hidden">
                             {/* Image Section */}
-                            <div className="relative w-full">
+                            <div className="relative w-[42%] shrink-0">
                                 <img
                                     src={current.img}
-                                    className="w-full h-[200px] object-cover"
+                                    className="w-full h-full min-h-[220px] object-cover"
                                     alt={current.title}
                                 />
-                                <div className="absolute top-2 left-3 bg-[#CB9E38] text-white font-bold w-12 h-12 flex items-center justify-center text-2xl rounded">
+                                <div className="absolute top-2 left-2 bg-[#CB9E38] text-white font-bold w-11 h-11 flex items-center justify-center text-[20px]">
                                     {current.id}
                                 </div>
                             </div>
 
-                            {/* Content Section */}
-                            <div className="p-4 flex flex-col">
-                                <p className="text-[#ffffff] text-base font-semibold">
+
+                            <div className="p-4 flex flex-1 flex-col justify-center">
+                                <p className="text-[#ffffff] text-[12px] font-semibold">
                                     {current.subtitle}
                                 </p>
 
-                                <h3 className="text-[#ffffff] text-xl font-bold mt-1">
+                                <h3 className="text-[#ffffff] text-[16px] font-bold mt-1">
                                     {current.title}
                                 </h3>
 
-                                <div className="w-full h-px bg-[#ffffff] my-3"></div>
+                                <div className="w-full h-px bg-[#393939] my-3"></div>
 
-                                <p className="text-white font-light text-xs leading-relaxed">
+                                <p className="text-white font-light text-[10px] leading-relaxed">
                                     {current.descJp}
                                 </p>
 
-                                <p className="text-white font-light text-sm mt-4">
+                                <p className="text-white font-light text-[10px] mt-5 leading-relaxed">
                                     {current.descEn}
                                 </p>
                             </div>

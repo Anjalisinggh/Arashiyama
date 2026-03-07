@@ -15,10 +15,10 @@ export default function AccessSection() {
   
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-start">
   
-          {/* LEFT */}
+          
           <div>
   
-            {/* Logo + circle */}
+           
             <div className="flex flex-col lg:flex-row justify-between items-start mb-6 gap-4 lg:gap-0">
   
               <div>
@@ -40,11 +40,10 @@ export default function AccessSection() {
             </div>
   
   
-            {/* Divider */}
+           
             <div className="border-t border-[#454545] my-6 md:my-7 lg:my-8"></div>
   
   
-            {/* Address */}
             <div className="flex flex-col lg:flex-row gap-3 md:gap-8 lg:gap-14 mb-6 md:mb-8 lg:mb-10">
   
               <span className="text-base md:text-lg lg:text-[20px] font-semibold text-white whitespace-nowrap w-full lg:w-[120px]">
@@ -58,7 +57,7 @@ export default function AccessSection() {
             </div>
   
   
-            {/* Opening hours */}
+           
             <div className="flex flex-col lg:flex-row gap-3 md:gap-4 lg:gap-14">
 
               <span className="text-base md:text-lg lg:text-[20px] font-semibold text-white whitespace-nowrap w-full lg:w-[120px]">
@@ -107,7 +106,7 @@ export default function AccessSection() {
           </div>
   
   
-          {/* RIGHT MAP */}
+        
           <div className=" justify-center lg:justify-center mt-8 lg:mt-0">
   
             <div className="bg-[#1a1a1a] p-4 md:p-5 lg:p-6 w-full max-w-full lg:w-auto">
@@ -124,7 +123,7 @@ export default function AccessSection() {
         </div>
   
   
-        {/* Bottom divider */}
+       
         <div className="border-t border-[#3a3a3a] mt-12 md:mt-16 lg:mt-20 "></div>
   
       </section>

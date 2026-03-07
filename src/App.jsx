@@ -15,27 +15,37 @@ export default function App() {
   return (
     <div className='grid grid-cols-1 grid-rows-[90px_calc(100vh-90px)] md:grid-rows-[128px_calc(100vh-128px)]'>
       <Navbar />
-      <div className='w-full overflow-y-auto -mt-20 md:-mt-28 no-scrollbar'>
-        <HeroSection />
-        {/* Mobile View */}
-        <FeaturedExperiencesMobile />
-        {/* Desktop View */}
-        <div className="hidden md:block">
+      <div id="main-scroll-container" className='w-full overflow-y-auto -mt-20 md:-mt-28 no-scrollbar'>
+        <section id="about-section">
+          <HeroSection />
+        </section>
+        
+        <section id="floor-map-section-mobile" className="md:hidden">
+          <FeaturedExperiencesMobile />
+        </section>
+       
+        <div id="floor-map-section-desktop" className="hidden md:block">
           <FeaturedExperiences />
         </div>
-        {/* Mobile View */}
-        <ExperiencesMobile />
-        {/* Desktop View */}
-        <div className="hidden md:block">
+       
+        <section id="experience-section-mobile" className="md:hidden">
+          <ExperiencesMobile />
+        </section>
+     
+        <div id="experience-section-desktop" className="hidden md:block">
           <Experiences />
         </div>
-        {/* Mobile View */}
+       
         <BusinessCTAMobile />
-        {/* Desktop View */}
+        
         <BusinessCTA />
         <LatestNews />
-        <AccessSection />
-        <ContactSection />
+        <section id="access-section">
+          <AccessSection />
+        </section>
+        <section id="contact-section">
+          <ContactSection />
+        </section>
         <Footer />
       </div>
       

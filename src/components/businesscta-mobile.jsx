@@ -26,7 +26,7 @@ export default function BusinessCTAMobile() {
                     </div>
                 </div>
 
-                {/* Tags - Stacked Vertically */}
+               
                 <div className="flex flex-col gap-3 mb-8">
                     {tags.map((tag, index) => (
                         <button

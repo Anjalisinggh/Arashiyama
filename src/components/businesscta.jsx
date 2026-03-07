@@ -17,7 +17,7 @@ export default function BusinessCTA() {
   
         <div className="relative max-w-2xl lg:max-w-5xl mx-auto text-left lg:text-center px-4">
 
-          {/* Heading */}
+         
           <div className="mb-10 lg:mb-12">
             <h2 className="text-2xl lg:text-3xl xl:text-[33px] font-bold leading-tight mb-4">
               <span className="text-[#CB9E38] inline">嵐山であなたのお店・企画</span>
@@ -29,7 +29,7 @@ export default function BusinessCTA() {
             </div>
           </div>
   
-          {/* Tags */}
+        
           <div className="flex flex-row flex-wrap justify-center gap-3.5 lg:gap-4 mb-10 lg:mb-12">
             {tags.map((tag, index) => (
               <span
@@ -41,13 +41,13 @@ export default function BusinessCTA() {
             ))}
           </div>
   
-          {/* Description */}
+       
           <p className="text-white font-bold text-base lg:text-[16px] max-w-2xl lg:max-w-3xl lg:mx-auto mb-10 lg:mb-12 leading-loose">
             世界中の観光客が訪れる京都・嵐山で、ポップアップ出店・イベント開催・
             文化体験の開催ができます。
           </p>
   
-          {/* Button */}
+       
           <div className="flex justify-center">
             <button className="bg-[#CB9E38] text-[#161616] px-10 lg:px-12 py-3.5 lg:py-4 rounded-xl lg:rounded-full font-bold text-base lg:text-[16px] hover:opacity-90 transition max-w-[360px] lg:w-auto">
               出店相談はこちら

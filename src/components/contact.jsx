@@ -97,17 +97,17 @@ ${formData.message}
                     />
                 </h2>
 
-                {/* Subtitle */}
+
                 <p className="text-white mt-8 mb-14 text-[15px]">
                     ご質問やご予約は以下のフォームよりお願いいたします。
                 </p>
 
-                {/* Form Container */}
+
                 <div className="bg-[#181818] p-10 rounded-md max-w-[500px] mx-auto">
 
                     <form className="space-y-6" onSubmit={handleSubmit}>
 
-                        {/* Name + Email */}
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="text-left">
                                 <label className="text-[#CDCDCD] text-[13px] mb-1 block">
@@ -140,7 +140,7 @@ ${formData.message}
                             </div>
                         </div>
 
-                        {/* Phone + Visit Date */}
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="text-left">
                                 <label className="text-[#CDCDCD] text-[13px] mb-1 block">
@@ -171,7 +171,7 @@ ${formData.message}
                             </div>
                         </div>
 
-                       
+
                         <div className="text-left">
                             <label className="text-[#CDCDCD] text-[13px] mb-1 block">
                                 ご用件
@@ -186,7 +186,7 @@ ${formData.message}
                             />
                         </div>
 
-                       
+
                         <div className="text-left">
                             <label className="text-[#CDCDCD] text-[13px] mb-1 block">
                                 お問い合わせ内容
@@ -202,7 +202,7 @@ ${formData.message}
                             />
                         </div>
 
-                       
+
                         <div className="flex flex-col items-center pt-2 gap-2">
                             <button
                                 type="submit"

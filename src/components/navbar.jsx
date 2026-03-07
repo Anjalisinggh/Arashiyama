@@ -1,5 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
+const navItems = [
+  { label: "施設について", target: "about-section" },
+  { label: "フロアマップ", target: "floor-map-section" },
+  { label: "体験コンテンツ", target: "experience-section" },
+  { label: "アクセス", target: "access-section" },
+  { label: "お問い合わせ", target: "contact-section" },
+];
+
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeLanguage, setActiveLanguage] = useState("jp");
@@ -7,15 +15,27 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const imageRef = useRef(null);
 
-  const navItems = [
-    { label: "施設について" },
-    { label: "フロアマップ" },
-    { label: "体験コンテンツ" },
-    { label: "アクセス" },
-    { label: "お問い合わせ" },
-  ];
-
   useEffect(() => {
+    const getSectionElement = (target) => {
+      if (target === "floor-map-section") {
+        return document.getElementById(
+          window.innerWidth < 768
+            ? "floor-map-section-mobile"
+            : "floor-map-section-desktop"
+        );
+      }
+
+      if (target === "experience-section") {
+        return document.getElementById(
+          window.innerWidth < 768
+            ? "experience-section-mobile"
+            : "experience-section-desktop"
+        );
+      }
+
+      return document.getElementById(target);
+    };
+
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -43,12 +63,63 @@ const Navbar = () => {
 
     window.addEventListener("resize", handleResize);
 
+    const scrollContainer = document.getElementById("main-scroll-container");
+
+    const handleScrollSpy = () => {
+      if (!scrollContainer) return;
+
+      const currentScroll = scrollContainer.scrollTop + 160;
+      let currentIndex = 0;
+
+      navItems.forEach((item, index) => {
+        const section = getSectionElement(item.target);
+        if (section && section.offsetTop <= currentScroll) {
+          currentIndex = index;
+        }
+      });
+
+      setActiveIndex(currentIndex);
+    };
+
+    scrollContainer?.addEventListener("scroll", handleScrollSpy);
+    handleScrollSpy();
+
     return () => {
       window.removeEventListener("resize", checkMobile);
       imageRef.current?.removeEventListener("load", handleImageLoad);
       window.removeEventListener("resize", handleResize);
+      scrollContainer?.removeEventListener("scroll", handleScrollSpy);
     };
   }, []);
+
+  const handleNavClick = (item, index) => {
+    setActiveIndex(index);
+
+    const scrollContainer = document.getElementById("main-scroll-container");
+    if (!scrollContainer) return;
+
+    const section =
+      item.target === "floor-map-section"
+        ? document.getElementById(
+            window.innerWidth < 768
+              ? "floor-map-section-mobile"
+              : "floor-map-section-desktop"
+          )
+        : item.target === "experience-section"
+          ? document.getElementById(
+              window.innerWidth < 768
+                ? "experience-section-mobile"
+                : "experience-section-desktop"
+            )
+          : document.getElementById(item.target);
+
+    if (!section) return;
+
+    scrollContainer.scrollTo({
+      top: Math.max(section.offsetTop - 40, 0),
+      behavior: "smooth",
+    });
+  };
 
   return (
     <nav
@@ -81,7 +152,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <li
                 key={index}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => handleNavClick(item, index)}
                 className="relative group cursor-pointer"
               >
                 <span>{item.label}</span>

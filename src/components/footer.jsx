@@ -16,14 +16,14 @@ export default function Footer() {
 
             <div className="relative max-w-6xl mx-auto text-center px-4 md:px-6">
 
-                {/* Logo */}
+              
                 <img
                     src="/footerlogo.png"
                     alt="Takumi Experience"
                     className="mx-auto w-[120px] md:w-[150px] lg:w-[180px] mb-6 md:mb-8 lg:mb-10 mt-6 md:mt-8 lg:mt-10"
                 />
 
-                {/* Links */}
+              
                 <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 text-[#C3C3C3] text-sm md:text-xs lg:text-sm xl:text-[14px] mb-6 md:mb-4 lg:mb-6">
                     <a href="#" className="hover:text-white transition">
                         会社概要
@@ -46,7 +46,6 @@ export default function Footer() {
                     </a>
                 </div>
 
-                {/* Social Icons */}
                 <div className="flex justify-center items-center gap-5 mb-6 md:mb-8 lg:mb-10">
 
                     <img
@@ -73,7 +72,7 @@ export default function Footer() {
 
             </div>
 
-            {/* Bottom Bar */}
+          
             <div className="w-full bg-[#161616] text-center text-[#313131] text-xs md:text-[10px] py-3 px-4">
                 © 2026 TAKUMI Experience ARASHIYAMA. All rights reserved.
             </div>
